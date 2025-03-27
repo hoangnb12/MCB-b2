@@ -37,6 +37,8 @@ int main(void){
 		
 		u16Tim = TIM_GetCounter(TIM2);
 		if(u16Tim >= 10){
+//			while(1){
+//			}
 			continue;
 		}
 		
@@ -49,6 +51,8 @@ int main(void){
 		
 		u16Tim = TIM_GetCounter(TIM2);
 		if((u16Tim >= 45) || (u16Tim <= 5)){
+//			while(1){
+//			}
 			continue;
 		}
 		
@@ -61,6 +65,8 @@ int main(void){
 		
 		u16Tim = TIM_GetCounter(TIM2);
 		if((u16Tim >= 90) || (u16Tim <= 70)){
+//			while(1){
+//			}
 			continue;
 		}
 		
@@ -73,6 +79,8 @@ int main(void){
 		
 		u16Tim = TIM_GetCounter(TIM2);
 		if((u16Tim >= 95) || (u16Tim <= 75)){
+//			while(1){
+//			}
 			continue;
 		}
 		
@@ -87,6 +95,8 @@ int main(void){
 				
 				u16Tim = TIM_GetCounter(TIM2);
 				if((u16Tim >= 65) || (u16Tim <= 45)){
+//					while(1){
+//					}
 					continue;
 				}
 				
@@ -99,6 +109,8 @@ int main(void){
 				
 				u16Tim = TIM_GetCounter(TIM2);
 				if((u16Tim >= 80) || (u16Tim <= 10)){
+//					while(1){
+//					}
 					continue;
 				}
 				
@@ -113,6 +125,8 @@ int main(void){
 		
 		u8CheckSum = u8Buff[0] + u8Buff[1] + u8Buff[2] + u8Buff[3];
 		if(u8CheckSum != u8Buff[4]){
+//			while(1){
+//			}
 			continue;
 		}
 		
@@ -133,7 +147,7 @@ void Timer_Config(void){
   Timer.TIM_Prescaler = 72 - 1;
   Timer.TIM_CounterMode = TIM_CounterMode_Up;
   TIM_TimeBaseInit(TIM2, &Timer);
-TIM_Cmd(TIM2, ENABLE);
+  TIM_Cmd(TIM2, ENABLE);
 }
 
 void Delay_us(uint32_t us) {
